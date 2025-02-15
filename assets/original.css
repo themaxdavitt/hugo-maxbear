@@ -221,6 +221,18 @@ a:visited, a.footnote-ref, a.footnote-backref {
   color: var(--base04);
 }
 
+a.footnote-ref::before {
+  content: '[';
+}
+
+a.footnote-ref::after {
+  content: ']';
+}
+
+content:has(.footnotes) + hr {
+  display: none;
+}
+
 a.blog-tags {
   line-height: 2;
   margin-right: 12px;
@@ -262,4 +274,28 @@ figcaption > p {
   text-align: center;
   font-style: italic;
   color: var(--base03);
+}
+
+/* heading links can just float nearby */
+.heading-link {
+    float: right;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* hide heading links unless hovered over */
+@media (pointer: fine) {
+    .heading-link {
+        visibility: hidden;
+    }
+
+    h1:hover .heading-link,
+    h2:hover .heading-link,
+    h3:hover .heading-link,
+    h4:hover .heading-link,
+    h5:hover .heading-link,
+    h6:hover .heading-link {
+        visibility: visible;
+    }
 }

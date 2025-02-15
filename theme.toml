@@ -1,29 +1,15 @@
-name = "Bear Cub"
+name = "Max Bear"
 license = "MIT"
-licenselink = "https://github.com/clente/hugo-bearcub/blob/master/LICENSE"
-description = "A lightweight Hugo theme based on Bear Blog and Hugo Bear Blog. It is free, multilingual, optimized for search engines, no-nonsense, responsive, light, and fast. Really fast."
+licenselink = "https://github.com/themaxdavitt/hugo-maxbear/blob/master/LICENSE"
+description = "A private theme based on Bear Cub for Max Davitt's personal website"
 
 # The home page of the theme, where the source can be found.
-homepage = "https://github.com/clente/hugo-bearcub"
+homepage = "https://github.com/themaxdavitt/hugo-maxbear"
 
 # If you have a running demo of the theme.
-demosite = "https://clente.github.io/hugo-bearcub"
-
-tags = ["blog", "responsive", "minimal", "personal", "dark", "multilingual"]
-features = ["favicon", "seo", "no javascript", "rss", "social cards"]
+demosite = "https://max.davitt.me"
 
 # If the theme has a single author
-[author]
-    name = "Caio Lente"
-    homepage = "https://lente.dev"
-
-# If porting an existing theme
 [original]
-    author = "Jan Raasch"
-    homepage = "https://www.janraasch.com"
-    repo = "https://github.com/janraasch/hugo-bearblog"
-
-# Hugo versions the theme supports
-[module]
-  [module.hugoVersion]
-    min = "0.90"
+  name = "Bear Cub"
+  homepage = "https://github.com/clente/hugo-bearcub"
