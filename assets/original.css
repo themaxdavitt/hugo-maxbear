@@ -1,16 +1,115 @@
+/* https://atelierbram.github.io/syntax-highlighting/atelier-schemes/lakeside/ */
+/* https://atelierbram.github.io/syntax-highlighting/atelier-schemes/sulphurpool/ */
+
+:root {
+  --atelier-sulphurpool-base00: #f5f7ff;
+  --atelier-sulphurpool-base01: #dfe2f1;
+  --atelier-sulphurpool-base02: #979db4;
+  --atelier-sulphurpool-base03: #898ea4;
+  --atelier-sulphurpool-base04: #6b7394;
+  --atelier-sulphurpool-base05: #5e6687;
+  --atelier-sulphurpool-base06: #293256;
+  --atelier-sulphurpool-base07: #202746;
+  --atelier-sulphurpool-base08: #c94922;
+  --atelier-sulphurpool-base09: #c76b29;
+  --atelier-sulphurpool-base0A: #c08b30;
+  --atelier-lakeside-base0B: #568c3b;
+  --atelier-lakeside-base0C: #2d8f6f;
+  --atelier-sulphurpool-base0D: #3d8fd1;
+  --atelier-sulphurpool-base0E: #6679cc;
+  --atelier-sulphurpool-base0F: #9c637a;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+    --atelier-sulphurpool-base00: #202746;
+    --atelier-sulphurpool-base01: #293256;
+    --atelier-sulphurpool-base02: #5e6687;
+    --atelier-sulphurpool-base03: #6b7394;
+    --atelier-sulphurpool-base04: #898ea4;
+    --atelier-sulphurpool-base05: #979db4;
+    --atelier-sulphurpool-base06: #dfe2f1;
+    --atelier-sulphurpool-base07: #f5f7ff;
+    --atelier-sulphurpool-base08: #c94922;
+    --atelier-sulphurpool-base09: #c76b29;
+    --atelier-sulphurpool-base0A: #c08b30;
+    --atelier-lakeside-base0B: #568c3b;
+    --atelier-lakeside-base0C: #2d8f6f;
+    --atelier-sulphurpool-base0D: #3d8fd1;
+    --atelier-sulphurpool-base0E: #6679cc;
+    --atelier-sulphurpool-base0F: #9c637a;
+	}
+}
+
+:root {
+  /* https://github.com/chriskempson/base16/blob/39fb23df970d4d6190d000271dec260250986012/styling.md */
+
+  /* Default Background */
+  --base00:  var(--atelier-sulphurpool-base00);
+  /* Lighter Background (Used for status bars, line number and folding marks) */
+  --base01:  var(--atelier-sulphurpool-base01);
+  /* Selection Background */
+  --base02:  var(--atelier-sulphurpool-base02);
+  /* Comments, Invisibles, Line Highlighting */
+  --base03:  var(--atelier-sulphurpool-base03);
+  /* Dark Foreground (Used for status bars) */
+  --base04:  var(--atelier-sulphurpool-base04);
+  /* Default Foreground, Caret, Delimiters, Operators */
+  --base05:  var(--atelier-sulphurpool-base05);
+  /* Light Foreground (Not often used) */
+  --base06:  var(--atelier-sulphurpool-base06);
+  /* Light Background (Not often used) */
+  --base07:  var(--atelier-sulphurpool-base07);
+  /* Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted */
+  --base08:  var(--atelier-sulphurpool-base08);
+  --red:     var(--base08);
+  /* Integers, Boolean, Constants, XML Attributes, Markup Link Url */
+  --base09:  var(--atelier-sulphurpool-base09);
+  --orange:  var(--base09);
+  /* Classes, Markup Bold, Search Text Background */
+  --base0A:  var(--atelier-sulphurpool-base0A);
+  --yellow:  var(--base0A);
+  /* Strings, Inherited Class, Markup Code, Diff Inserted */
+  --base0B:  var(--atelier-lakeside-base0B);
+  --green:   var(--base0B);
+  /* Support, Regular Expressions, Escape Characters, Markup Quotes */
+  --base0C:  var(--atelier-lakeside-base0C);
+  --cyan:    var(--base0C);
+  /* Functions, Methods, Attribute IDs, Headings */
+  --base0D:  var(--atelier-sulphurpool-base0D);
+  --blue:    var(--base0D);
+  /* Keywords, Storage, Selector, Markup Italic, Diff Changed */
+  --base0E:  var(--atelier-sulphurpool-base0E);
+  --violet:  var(--base0E);
+  /* Deprecated, Opening/Closing Embedded Language Tags, e.g. `<?php ?>` */
+  --base0F:  var(--atelier-sulphurpool-base0F);
+  --magenta: var(--base0F);
+}
+
+:focus:not(:focus-visible) {
+  outline: 0;
+  box-shadow: none;
+}
+
+:focus {
+  outline-style: solid;
+  outline-color: var(--base02);
+}
+
 body {
   font-family: Verdana, sans-serif;
   margin: auto;
   padding: 20px;
   max-width: 720px;
   text-align: left;
-  background-color: #1d1f27;
+  background-color: var(--base00);
   word-wrap: break-word;
   overflow-wrap: break-word;
   line-height: 1.5;
-  color: #c9d1d9;
+  color: var(--base05);
 }
 
+a,
 h1,
 h2,
 h3,
@@ -19,11 +118,7 @@ h5,
 h6,
 strong,
 b {
-  color: #eee;
-}
-
-a {
-  color: #8cc2dd;
+  color: var(--base06);
 }
 
 .title {
@@ -43,17 +138,12 @@ nav a {
   margin-right: 10px;
 }
 
-textarea {
-  background-color: #252525;
-  color: #ddd;
+textarea, input[type="text"] {
+  background-color: var(--base01);
   width: 100%;
   font-size: 16px;
-}
-
-input {
-  background-color: #252525;
-  color: #ddd;
-  font-size: 16px;
+  border: none;
+  color: var(--base05);
 }
 
 content {
@@ -69,7 +159,7 @@ th,
 td {
   border: 1px solid;
   border-collapse: collapse;
-  border-color: #c9d1d9;
+  border-color: var(--base02);
   padding: 5px;
 }
 
@@ -80,8 +170,6 @@ img {
 
 code {
   padding: 2px 5px;
-  color: #f8f8f2;
-  background-color: #282a36;
 }
 
 pre code {
@@ -94,25 +182,24 @@ pre code {
 }
 
 blockquote {
-  border-left: 1px solid #999;
-  color: #ccc;
+  border-left: 1px solid var(--base02);
+  color: var(--base03);
   padding-left: 20px;
   font-style: italic;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid var(--base04);
+  margin: 1em 0;
+  padding: 0;
 }
 
 footer {
   padding: 25px;
   text-align: center;
-}
-
-.helptext {
-  color: #aaa;
-  font-size: small;
-}
-
-.errorlist {
-  color: #eba613;
-  font-size: small;
 }
 
 /* blog posts */
@@ -130,8 +217,8 @@ ul.blog-posts li span {
   flex: 0 0 130px;
 }
 
-ul.blog-posts li a:visited {
-  color: #8b6fcb;
+a:visited, a.footnote-ref, a.footnote-backref {
+  color: var(--base04);
 }
 
 a.blog-tags {
@@ -159,7 +246,7 @@ p.byline {
   top: 5;
   transform: translateY(-600%);
   transition: transform 0.5s;
-  background-color: #1d1f27;
+  background-color: var(--base00);
   padding: 6px;
 }
 
@@ -176,5 +263,5 @@ figcaption > p {
   margin-block-start: 0px;
   text-align: center;
   font-style: italic;
-  color: #ccc;
+  color: var(--base05);
 }
