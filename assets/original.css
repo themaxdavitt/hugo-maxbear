@@ -243,9 +243,7 @@ p.byline {
 /* "Skip to main content" link */
 .skip-link {
   position: absolute;
-  top: 5;
   transform: translateY(-600%);
-  transition: transform 0.5s;
   background-color: var(--base00);
   padding: 6px;
 }
