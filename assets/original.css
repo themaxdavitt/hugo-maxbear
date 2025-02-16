@@ -212,7 +212,8 @@ figcaption > p {
 }
 
 /* Prevent flash of unstyled content */
-html {
+/* TODO: add back after switching to more stable webhost */
+/* html {
   visibility: visible !important;
   opacity: 1 !important;
-}
+} */
