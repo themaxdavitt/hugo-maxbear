@@ -217,7 +217,7 @@ ul.blog-posts li span {
   flex: 0 0 130px;
 }
 
-a:visited, a.footnote-ref, a.footnote-backref {
+a:visited, a.footnote-ref, a.footnote-backref, header a {
   color: var(--base04);
 }
 
