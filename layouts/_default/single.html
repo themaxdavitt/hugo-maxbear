@@ -13,7 +13,7 @@
     <time datetime='{{ .Lastmod | dateFormat "2006-01-02 15:04" }}'>
       {{ .Lastmod | dateFormat "2006-01-02 15:04" }}
     </time>
-    (<a href="https://github.com/themaxdavitt/website/commits/main/content/{{ .File.Path }}">History</a>)
+    (<a class="muted-link" href="https://github.com/themaxdavitt/website/commits/main/content/{{ .File.Path }}">{{ i18n "history" }}</a>)
   {{ end }}
 </p>
 {{ end }}
@@ -25,13 +25,13 @@
 {{ end }}
 <p>
   {{ range (.GetTerms "tags") }}
-    <a class="blog-tags" href="{{ .RelPermalink }}">#{{ lower .LinkTitle }}</a>
+    <a class="blog-tags muted-link" href="{{ .RelPermalink }}">#{{ lower .LinkTitle }}</a>
   {{ end }}
 </p>
 {{ if not .Params.hideReply }}
 {{ with .Site.Params.author.email }}
   <p>
-    <a href='mailto:{{ . }}?subject={{ i18n "email-subject" }}"{{ default $.Site.Title $.Page.Title }}"'>
+    <a class="muted-link" href='mailto:{{ . }}?subject={{ i18n "email-subject" }}"{{ default $.Site.Title $.Page.Title }}"'>
       {{ i18n "email-reply" }} ↪
     </a>
   </p>

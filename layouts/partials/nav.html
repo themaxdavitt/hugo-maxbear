@@ -1,15 +1,15 @@
 {{ $path := .RelPermalink }}
 {{ if .IsHome }}
-  <a href="{{ "" | relURL }}"><b>Home</b></a>
+  <a class="muted-link" href="{{ "" | relURL }}"><b>{{ i18n "home" }}</b></a>
 {{ else }}
-  <a href="{{ "" | relURL }}">Home</a>
+  <a class="muted-link" href="{{ "" | relURL }}">{{ i18n "home" }}</a>
 {{ end }}
 
 {{ range .Site.Menus.main }}
   {{ if hasPrefix $path .Page.Path }}
-    <a href="{{ .URL }}"><b>{{ .Name }}</b></a>
+    <a class="muted-link" href="{{ .URL }}"><b>{{ .Name }}</b></a>
   {{ else }}
-    <a href="{{ .URL }}">{{ .Name }}</a>
+    <a class="muted-link" href="{{ .URL }}">{{ .Name }}</a>
   {{ end }}
 {{ end }}
 
@@ -22,11 +22,11 @@
 <!-- Create a link to every translation -->
 {{ range where .Site.Languages "Lang" "!=" .Page.Lang }}
   {{ with (index $translations .Lang) }}
-    <a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+    <a class="muted-link" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
   {{ else }}
     <!-- The complicated setup was necessary to make a grayed out link -->
     {{ if not .Params.hideUntranslated }}
-      <a class="disabled" role="link" aria-disabled="true">{{ .LanguageName }}</a>
+      <a class="disabled muted-link" role="link" aria-disabled="true">{{ .LanguageName }}</a>
     {{ end }}
   {{ end }}
 {{ end }}

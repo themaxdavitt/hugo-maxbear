@@ -24,3 +24,9 @@
 
 [modified]
   other = "Last modified"
+
+[home]
+  other = "Home"
+
+[history]
+  other = "History"
